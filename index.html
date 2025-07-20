@@ -160,6 +160,32 @@
           <ul class="footer__links">
             <li><a href="#">Sobre Nós</a></li>
             <li><a href="#">Por que nos escolher</a></li>
+            <li>
+              <!-- Link que abre os horários -->
+              <a href="#" class="link-horarios" onclick="abrirModal(event)">Horários de Treino</a>
+
+              <!-- Modal de horários -->
+              <div class="modal" id="modalHorarios">
+                <div class="modal-content">
+                  <span class="fechar" onclick="fecharModal()">&times;</span>
+                  <h2>Horários de Treino Cross</h2>
+                  <ul>
+                    <li><strong>Seg a Qui:</strong> 06h, 07h, 08h, 16h30, 17h30, 18h30, 19h30, 20h30</li>
+                    <li><strong>Sexta:</strong> 06h, 07h, 08h, 16h30, 17h30, 18h30, 19h30</li>
+                    <li><strong>Sábado:</strong> 08h30</li>
+                    <li><strong>Domingo:</strong> Fechado</li>
+                  </ul>
+                  <br>
+                  <h2>Horários de Treino Hyrox</h2>
+                  <ul>
+                    <li><strong>Seg e Qua:</strong> 06h, 07h, 18h30, 19h30, 20h30</li>
+                    <li><strong>Sexta:</strong> 06h, 07h, 18h30, 19h30</li>
+                    <li><strong>Sábado:</strong> 07h</li>
+                    <li><strong>Domingo:</strong> Fechado</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="footer__col">
