@@ -1,121 +1,86 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Menu Mobile (só se existir)
-  const menuBtn = document.getElementById("menu-btn");
-  const navLinks = document.getElementById("nav-links");
+// main.js - Versão limpa e moderna
+document.addEventListener("DOMContentLoaded", () => {
+  // ==================== NAVBAR ====================
+  const navbar = document.getElementById("navbar");
+  
+  function handleScroll() {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  }
+  window.addEventListener("scroll", handleScroll);
 
-  if (menuBtn && navLinks) {
-    const menuBtnIcon = menuBtn.querySelector("i");
+  // ==================== MOBILE MENU ====================
+  const navToggle = document.getElementById("navToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileClose = document.getElementById("mobileClose");
 
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-      const isOpen = navLinks.classList.contains("open");
-      menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+  navToggle.addEventListener("click", () => {
+    mobileMenu.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+
+  mobileClose.addEventListener("click", () => {
+    mobileMenu.classList.remove("open");
+    document.body.style.overflow = "visible";
+  });
+
+  // Fechar menu ao clicar em link
+  document.querySelectorAll(".mobile-link").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      document.body.style.overflow = "visible";
     });
+  });
 
-    navLinks.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuBtnIcon.setAttribute("class", "ri-menu-line");
-    });
+  // ==================== MODAL HORÁRIOS ====================
+  const modal = document.getElementById("modalHorarios");
+  const btnHorarios = document.getElementById("btnHorarios");
+  const btnHorariosFooter = document.getElementById("btnHorariosFooter");
+  const modalClose = document.getElementById("modalClose");
+  const modalOverlay = document.getElementById("modalOverlay");
+
+  function openModal() {
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
   }
 
-  // ScrollReveal config
-  const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 1000,
-  };
+  function closeModal() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "visible";
+  }
 
-  ScrollReveal().reveal(".header__image img", {
-    ...scrollRevealOption,
-    origin: "right",
+  btnHorarios?.addEventListener("click", openModal);
+  btnHorariosFooter?.addEventListener("click", openModal);
+  modalClose?.addEventListener("click", closeModal);
+  modalOverlay?.addEventListener("click", closeModal);
+
+  // Tabs do modal
+  document.querySelectorAll(".modal__tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".modal__tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".modal__content").forEach(c => c.classList.remove("active"));
+      
+      tab.classList.add("active");
+      document.getElementById(`tab-${tab.dataset.tab}`).classList.add("active");
+    });
   });
 
-  ScrollReveal().reveal(".header__content h1", {
-    ...scrollRevealOption,
-    delay: 500,
+  // ==================== REVEAL ANIMATION (Intersection Observer) ====================
+  const revealElements = document.querySelectorAll("[data-reveal], [data-reveal-right], [data-reveal-left]");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
   });
 
-  ScrollReveal().reveal(".header__content .section__description", {
-    ...scrollRevealOption,
-    delay: 1000,
-  });
-
-  ScrollReveal().reveal(".header__btn", {
-    ...scrollRevealOption,
-    delay: 1500,
-  });
-
-  ScrollReveal().reveal(".header__stats", {
-    ...scrollRevealOption,
-    delay: 2000,
-  });
-
-  ScrollReveal().reveal(".about__image img", {
-    ...scrollRevealOption,
-    origin: "left",
-  });
-
-  ScrollReveal().reveal(".about__content .section__header", {
-    ...scrollRevealOption,
-    delay: 500,
-  });
-
-  ScrollReveal().reveal(".about__content .section__description", {
-    ...scrollRevealOption,
-    delay: 1000,
-    interval: 500,
-  });
-
-  ScrollReveal().reveal(".about__btn", {
-    ...scrollRevealOption,
-    delay: 2000,
-  });
-
-  ScrollReveal().reveal(".program__card", {
-    ...scrollRevealOption,
-    interval: 500,
-  });
-
-  ScrollReveal().reveal(".service__image img", {
-    ...scrollRevealOption,
-    origin: "right",
-  });
-
-  ScrollReveal().reveal(".service__content .section__header", {
-    ...scrollRevealOption,
-    delay: 500,
-  });
-
-  ScrollReveal().reveal(".service__list li", {
-    ...scrollRevealOption,
-    delay: 1000,
-    interval: 500,
-  });
-
-  ScrollReveal().reveal(".service__btn", {
-    ...scrollRevealOption,
-    delay: 2500,
-  });
-
-  // Swiper init
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-  });
-
-  // Modal de Horários
-  window.abrirModal = function (event) {
-    event.preventDefault();
-    document.getElementById("modalHorarios").style.display = "flex";
-  };
-
-  window.fecharModal = function () {
-    document.getElementById("modalHorarios").style.display = "none";
-  };
-
-  window.onclick = function (event) {
-    const modal = document.getElementById("modalHorarios");
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+  revealElements.forEach(el => observer.observe(el));
 });

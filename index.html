@@ -1,246 +1,429 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon">
-    <title>BBOX TRAINING</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="nav__header">
-          <div class="nav__logo">
-            <a href="#">
-              <img src="assets/logo.png" alt="logo" />
-            </a>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BBOX TRAINING</title>
 
-        </div>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon" />
 
-      </nav>
-      <div class="section__container header__container" id="home">
-        <div class="header__image">
-          <img src="assets/header.png" alt="header" />
-        </div>
-        <div class="header__content">
-          <h1>TENHA UM CORPO SAUDÁVEL COM OS EXERCÍCIOS CERTOS</h1>
-          <p class="section__description">
-            Alcance o corpo dos seus sonhos com treinos desenvolvidos por especialistas. Nossos programas são pensados para melhorar sua força, resistência e bem-estar geral. Seja você iniciante ou avançado, aqui você encontra o suporte ideal para evoluir com saúde e performance.
-          </p>
+  <!-- Ícones Remix -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-          <div class="header__stats">
-            <h4>
-              <ul>
-                <li type="disc">CROSSTRAINING &nbsp;</li>
-                <li type="disc">HYROX &nbsp;</li>
-                <li type="disc">CORRIDA &nbsp;</li>
-              </ul>
-            </h4>
-          </div>
-        </div>
-      </div>
-    </header>
+  <!-- Google Fonts: Barlow Condensed (display) + Barlow (corpo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <section class="about" id="about">
-      <div class="section__container about__container">
-        <div class="about__image">
-          <img src="assets/about.jpg" alt="about" />
-        </div>
-        <div class="about__content">
-          <h2 class="section__header">Conquiste seus objetivos com quem entende de resultado</h2>
-          <p class="section__description">
-            No BBOX TRAINING, oferecemos mais do que treinos: oferecemos transformação. Com acompanhamento profissional, treinos personalizados e um ambiente inspirador, você terá tudo que precisa para se superar todos os dias. Venha fortalecer seu corpo, sua mente e sua rotina.
-          </p>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-        </div>
-      </div>
-    </section>
+  <!-- ==============================
+       NAVEGAÇÃO
+       Para editar os links, altere o texto e o href="#secao"
+       ============================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
 
-    <section class="program" id="program">
-      <div class="section__container program__container">
-        <div class="program__header">
-          <h2 class="section__header">Os programas ideais para seu estilo de vida</h2>
-          <p class="section__description">
-            Seja para ganhar força, perder peso ou melhorar o condicionamento, temos treinos específicos para você. Escolha entre nossos programas de Cross Training, Hyrox, Corrida, LPO e muito mais. Aqui, o foco é o seu progresso.
-          </p>
-        </div>
-        <div class="program__grid">
-          <div class="program__card">
-            <img src="assets/crossfit_icon.png" alt="program" />
-            <h4>Crossfit</h4>
-            <p>
-              Treinamento de alta intensidade que combina aeróbico, levantamento de peso, ginástica e movimentos funcionais. Construa músculos, aumente sua resistência e ganhe força com orientação especializada.
-            </p>
+      <!-- Logo -->
+      <a href="#home" class="navbar__logo">
+        <img src="assets/logo.png" alt="BBOX Training" />
+      </a>
 
-          </div>
-          <div class="program__card">
-            <img src="assets/remo_white_icon.png" alt="program" />
-            <h4>Hyrox</h4>
-            <p>
-              Uma combinação de corrida e exercícios funcionais de alta intensidade, voltado para quem busca superar seus limites físicos e mentais com um desafio completo.
-            </p>
+      <!-- Links (desktop) -->
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#programs">Programas</a></li>
+        <li><a href="#why">Diferenciais</a></li>
+        <li><a href="#contact">Contato</a></li>
+        <!-- Botão principal no nav -->
+        <li>
+          <a href="https://wa.me/5511982306459" class="btn btn--nav" target="_blank" rel="noopener">
+            Comece agora
+          </a>
+        </li>
+      </ul>
 
-          </div>
-          <div class="program__card">
-            <img src="assets/lpo_icon.png" alt="program" />
-            <h4>LPO</h4>
-            <p>
-              O Levantamento de Peso Olímpico promove força, potência e mobilidade. Ideal para quem busca desempenho e técnica, com ganhos reais em força e controle corporal.
-            </p>
+      <!-- Botão hamburguer (mobile) -->
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+        <i class="ri-menu-line"></i>
+      </button>
 
-          </div>
-          <div class="program__card">
-            <img src="assets/program-4.png" alt="program" />
-            <h4>Corrida</h4>
-            <p>
-              Treinos personalizados para iniciantes ou corredores experientes. Evolua na resistência, aumente a velocidade e melhore seu desempenho em provas de rua.
-            </p>
+    </div>
+  </nav>
 
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="service">
-      <div class="section__container service__container">
-        <div class="service__content">
-          <h2 class="section__header">
-            Por que escolher o BBOX TRAINING?
-          </h2>
-          <ul class="service__list">
-            <li>
-              <h4>
-                <span><i class="ri-checkbox-circle-fill"></i></span>
-                Planilhas Personalizadas
-              </h4>
-              <p class="section__description">
-                Treinos ajustados ao seu objetivo, com acompanhamento de profissionais que entendem sua rotina e evolução.
-              </p>
-            </li>
-            <li>
-              <h4>
-                <span><i class="ri-checkbox-circle-fill"></i></span>
-                Coaches Preparados
-              </h4>
-              <p class="section__description">
-                Equipe experiente e especializada para garantir treinos seguros, eficientes e motivadores.
-              </p>
-            </li>
-            <li>
-              <h4>
-                <span><i class="ri-checkbox-circle-fill"></i></span>
-                Horário Flexível
-              </h4>
-              <p class="section__description">
-                Treine no seu ritmo. Nossa agenda é pensada para se adaptar à sua rotina, sem deixar os resultados de lado.
-              </p>
-            </li>
-          </ul>
-
-        </div>
-        <div class="service__image">
-          <img src="assets/service.png" alt="service" />
-        </div>
-      </div>
-    </section>
-
-    <section class="integracao-nutri">
-      <div class="container">
-        <h2>Potencialize seus resultados</h2>
-        <p>Alcance seus objetivos com o suporte da nutricionista parceira Nathalye Matos.</p>
-        <a href="https://nathalyenutri.netlify.app/" class="btn-nutri" target="_blank" rel="noopener">Conheça a Nutricionista</a>
-      </div>
-    </section>
-
-    <footer>
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h4>BBOX TRAINING</h4>
-          <ul class="footer__links">
-            <li><a href="#">Sobre Nós</a></li>
-            <li><a href="#">Por que nos escolher</a></li>
-            <li>
-              <!-- Link que abre os horários -->
-              <a href="#" class="link-horarios" onclick="abrirModal(event)">Horários de Treino</a>
-
-              <!-- Modal de horários -->
-              <div class="modal" id="modalHorarios">
-                <div class="modal-content">
-                  <span class="fechar" onclick="fecharModal()">&times;</span>
-                  <h2>Horários de Treino Cross</h2>
-                  <ul>
-                    <li><strong>Seg a Qui:</strong> 06h, 07h, 08h, 16h30, 17h30, 18h30, 19h30, 20h30</li>
-                    <li><strong>Sexta:</strong> 06h, 07h, 08h, 16h30, 17h30, 18h30, 19h30</li>
-                    <li><strong>Sábado:</strong> 08h30</li>
-                    <li><strong>Domingo:</strong> Fechado</li>
-                  </ul>
-                  <br>
-                  <h2>Horários de Treino Hyrox</h2>
-                  <ul>
-                    <li><strong>Seg e Qua:</strong> 06h, 07h, 18h30, 19h30, 20h30</li>
-                    <li><strong>Sexta:</strong> 06h, 07h, 18h30, 19h30</li>
-                    <li><strong>Sábado:</strong> 07h</li>
-                    <li><strong>Domingo:</strong> Fechado</li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Categorias</h4>
-          <ul class="footer__links">
-            <li><a href="#">Cross Training</a></li>
-            <li><a href="#">Hyrox</a></li>
-            <li><a href="#">Corrida</a></li>
-            <li><a href="#">Ginástica</a></li>
-            <li><a href="#">LPO</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Entre em Contato Conosco</h4>
-          <ul class="footer__links">
-            <li>
-              <a href="https://wa.me/5511982306459" target="_blank">
-                <span><i class="ri-phone-fill"></i></span> (11) 98230-6459
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/b_box.training" target="_blank">
-                <span><i class="ri-instagram-line"></i></span>b_box.training
-              </a>
-            </li>
-            <li>
-              <a href="https://maps.app.goo.gl/adEsp8G5uPaknHZ3A" target="_blank">
-                <span><i class="ri-map-pin-2-fill"></i></span> Av. Antônio Marques Figueira, 1264 - Vila Figueira, Suzano - SP
-              </a>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
-      <div class="section__container footer__bar">
-        <a href="#" class="footer__logo">
-          <img src="assets/logo.png" alt="logo" />
+  <!-- Menu mobile (overlay) -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose" aria-label="Fechar menu">
+      <i class="ri-close-line"></i>
+    </button>
+    <ul>
+      <li><a href="#home" class="mobile-link">Início</a></li>
+      <li><a href="#about" class="mobile-link">Sobre</a></li>
+      <li><a href="#programs" class="mobile-link">Programas</a></li>
+      <li><a href="#why" class="mobile-link">Diferenciais</a></li>
+      <li><a href="#contact" class="mobile-link">Contato</a></li>
+      <li>
+        <a href="https://wa.me/5511982306459" class="btn btn--primary mobile-link" target="_blank" rel="noopener">
+          Comece agora
         </a>
-        <p>Copyright © 2025 cKe Design. All rights reserved.</p>
-        <ul class="footer__socials">
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- ==============================
+       HERO / SEÇÃO INICIAL
+       ============================== -->
+  <section class="hero" id="home">
+    <!-- Fundo com grain/textura via CSS -->
+    <div class="hero__bg"></div>
+
+    <div class="container hero__container">
+      <!-- Texto principal -->
+      <div class="hero__text" data-reveal>
+        <span class="hero__label">BBOX TRAINING</span>
+        <h1 class="hero__title">
+          TENHA UM CORPO<br />
+          <span class="hero__title--accent">SAUDÁVEL</span><br />
+          COM OS TREINOS<br />CERTOS
+        </h1>
+        <p class="hero__description">
+          Programas desenvolvidos por especialistas para melhorar sua força, resistência e bem-estar. Do iniciante ao avançado — aqui você evolui.
+        </p>
+
+        <!-- Pills das modalidades -->
+        <div class="hero__pills">
+          <span class="pill">Cross Training</span>
+          <span class="pill">Hyrox</span>
+          <span class="pill">Corrida</span>
+          <span class="pill">LPO</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="hero__actions">
+          <a href="https://wa.me/5511982306459" class="btn btn--primary" target="_blank" rel="noopener">
+            <i class="ri-whatsapp-line"></i> Fale conosco
+          </a>
+          <a href="#programs" class="btn btn--outline">
+            Ver programas <i class="ri-arrow-down-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagem hero -->
+      <div class="hero__image" data-reveal-right>
+        <img src="assets/header.png" alt="Atleta BBOX Training" />
+      </div>
+    </div>
+
+    <!-- Linha decorativa inferior -->
+    <div class="hero__divider"></div>
+  </section>
+
+
+  <!-- ==============================
+       SOBRE
+       ============================== -->
+  <section class="about" id="about">
+    <div class="container about__container">
+
+      <div class="about__image" data-reveal-left>
+        <img src="assets/about.jpg" alt="Academia BBOX Training" />
+        <!-- Badge sobre a imagem -->
+        <!-- <div class="about__badge">
+          <span class="about__badge-number">+</span>
+          <span class="about__badge-text">Resultados<br/>reais</span>
+        </div> -->
+      </div>
+
+      <div class="about__content" data-reveal>
+        <!-- Label de seção -->
+        <span class="section__label">Sobre nós</span>
+        <h2 class="section__title">
+          Conquiste seus objetivos com quem entende de resultado
+        </h2>
+        <p class="section__body">
+          No BBOX TRAINING, oferecemos mais do que treinos: oferecemos transformação. Com acompanhamento profissional, treinos personalizados e um ambiente inspirador, você terá tudo que precisa para se superar todos os dias.
+        </p>
+        <p class="section__body">
+          Venha fortalecer seu corpo, sua mente e sua rotina. Nossa equipe está pronta para te guiar em cada etapa da sua evolução.
+        </p>
+        <a href="https://wa.me/5511982306459" class="btn btn--primary" target="_blank" rel="noopener">
+          Quero começar
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       PROGRAMAS
+       ============================== -->
+  <section class="programs" id="programs">
+    <div class="container">
+
+      <div class="section__head" data-reveal>
+        <span class="section__label">Modalidades</span>
+        <h2 class="section__title">Os programas ideais<br />para seu estilo de vida</h2>
+        <p class="section__body section__body--center">
+          Seja para ganhar força, perder peso ou melhorar o condicionamento — temos o treino certo pra você.
+        </p>
+      </div>
+
+      <!-- Grid de cards -->
+      <div class="programs__grid">
+
+        <!-- Card: Crossfit -->
+        <div class="program-card" data-reveal>
+          <div class="program-card__icon">
+            <img src="assets/crossfit_icon.png" alt="Crossfit" />
+          </div>
+          <h3 class="program-card__title">Crossfit</h3>
+          <p class="program-card__body">
+            Treinamento de alta intensidade que combina aeróbico, levantamento de peso, ginástica e movimentos funcionais. Construa músculo, aumente resistência e ganhe força com orientação especializada.
+          </p>
+          <span class="program-card__tag">Alta intensidade</span>
+        </div>
+
+        <!-- Card: Hyrox -->
+        <div class="program-card" data-reveal>
+          <div class="program-card__icon">
+            <img src="assets/remo_white_icon.png" alt="Hyrox" />
+          </div>
+          <h3 class="program-card__title">Hyrox</h3>
+          <p class="program-card__body">
+            Combinação de corrida e exercícios funcionais de alta intensidade. Para quem busca superar seus limites físicos e mentais com um desafio completo.
+          </p>
+          <span class="program-card__tag">Resistência</span>
+        </div>
+
+        <!-- Card: LPO -->
+        <div class="program-card" data-reveal>
+          <div class="program-card__icon">
+            <img src="assets/lpo_icon.png" alt="LPO" />
+          </div>
+          <h3 class="program-card__title">LPO</h3>
+          <p class="program-card__body">
+            Levantamento de Peso Olímpico para desenvolver força, potência e mobilidade. Ideal para quem busca técnica e desempenho com ganhos reais de força.
+          </p>
+          <span class="program-card__tag">Força & Técnica</span>
+        </div>
+
+        <!-- Card: Corrida -->
+        <div class="program-card" data-reveal>
+          <div class="program-card__icon">
+            <img src="assets/program-4.png" alt="Corrida" />
+          </div>
+          <h3 class="program-card__title">Corrida</h3>
+          <p class="program-card__body">
+            Treinos personalizados para iniciantes ou corredores experientes. Evolua na resistência, ganhe velocidade e melhore seu desempenho em provas de rua.
+          </p>
+          <span class="program-card__tag">Performance</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       POR QUE ESCOLHER O BBOX
+       ============================== -->
+  <section class="why" id="why">
+    <div class="container why__container">
+
+      <div class="why__content" data-reveal>
+        <span class="section__label">Diferenciais</span>
+        <h2 class="section__title">Por que escolher o BBOX TRAINING?</h2>
+
+        <ul class="why__list">
+          <li class="why__item">
+            <div class="why__item-icon">
+              <i class="ri-file-list-3-line"></i>
+            </div>
+            <div>
+              <h4>Planilhas Personalizadas</h4>
+              <p>Treinos ajustados ao seu objetivo, com acompanhamento de profissionais que entendem sua rotina e evolução.</p>
+            </div>
+          </li>
+          <li class="why__item">
+            <div class="why__item-icon">
+              <i class="ri-user-star-line"></i>
+            </div>
+            <div>
+              <h4>Coaches Preparados</h4>
+              <p>Equipe experiente e especializada para garantir treinos seguros, eficientes e motivadores.</p>
+            </div>
+          </li>
+          <li class="why__item">
+            <div class="why__item-icon">
+              <i class="ri-time-line"></i>
+            </div>
+            <div>
+              <h4>Horário Flexível</h4>
+              <p>Treine no seu ritmo. Nossa agenda é pensada para se adaptar à sua rotina sem abrir mão dos resultados.</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Botão de horários -->
+        <button class="btn btn--outline" id="btnHorarios">
+          <i class="ri-calendar-line"></i> Ver horários de treino
+        </button>
+      </div>
+
+      <div class="why__image" data-reveal-right>
+        <img src="assets/service.png" alt="Treino BBOX Training" />
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       NUTRICIONISTA PARCEIRA
+       ============================== -->
+  <section class="nutri">
+    <div class="container nutri__container" data-reveal>
+      <div class="nutri__text">
+        <span class="section__label section__label--gold">Parceria</span>
+        <h2 class="nutri__title">Potencialize seus resultados</h2>
+        <p>Alcance seus objetivos com o suporte da nutricionista parceira <strong>Nathalye Matos</strong>. Treino e alimentação juntos fazem toda a diferença.</p>
+      </div>
+      <a href="https://nathalyenutri.netlify.app/" class="btn btn--gold" target="_blank" rel="noopener">
+        Conheça a Nutricionista <i class="ri-external-link-line"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       FOOTER / CONTATO
+       ============================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__grid">
+
+      <!-- Coluna 1: marca -->
+      <div class="footer__brand">
+        <a href="#home">
+          <img src="assets/logo.png" alt="BBOX Training" class="footer__logo" />
+        </a>
+        <p>Sua transformação começa aqui. Treinos de alta qualidade com orientação especializada em Suzano - SP.</p>
+      </div>
+
+      <!-- Coluna 2: links -->
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#why">Por que nos escolher</a></li>
+          <li>
+            <button class="footer__link-btn" id="btnHorariosFooter">Horários de Treino</button>
+          </li>
         </ul>
       </div>
-    </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+      <!-- Coluna 3: modalidades -->
+      <div class="footer__col">
+        <h4>Modalidades</h4>
+        <ul>
+          <li><a href="#programs">Cross Training</a></li>
+          <li><a href="#programs">Hyrox</a></li>
+          <li><a href="#programs">Corrida</a></li>
+          <li><a href="#programs">LPO</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: contato -->
+      <div class="footer__col">
+        <h4>Contato</h4>
+        <ul class="footer__contact">
+          <li>
+            <a href="https://wa.me/5511982306459" target="_blank" rel="noopener">
+              <i class="ri-whatsapp-line"></i> (11) 98230-6459
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/b_box.training" target="_blank" rel="noopener">
+              <i class="ri-instagram-line"></i> @b_box.training
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/adEsp8G5uPaknHZ3A" target="_blank" rel="noopener">
+              <i class="ri-map-pin-2-fill"></i> Av. Antônio Marques Figueira, 1264 — Vila Figueira, Suzano - SP
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Rodapé inferior -->
+    <div class="footer__bottom">
+      <p>© 2025 cKe Design. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+
+  <!-- ==============================
+       BOTÃO FLUTUANTE WHATSAPP
+       ============================== -->
+  <a
+    href="https://wa.me/5511982306459"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar no WhatsApp"
+  >
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+
+  <!-- ==============================
+       MODAL DE HORÁRIOS
+       ============================== -->
+  <div class="modal" id="modalHorarios" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__box">
+      <button class="modal__close" id="modalClose" aria-label="Fechar modal">
+        <i class="ri-close-line"></i>
+      </button>
+
+      <h2 id="modalTitle">Horários de Treino</h2>
+
+      <!-- Tabs -->
+      <div class="modal__tabs">
+        <span class="modal__tab active" data-tab="cross">Cross Training | HYROX</span>
+        <!-- <button class="modal__tab" data-tab="hyrox">Hyrox</button> -->
+      </div>
+
+      <!-- Conteúdo Cross -->
+      <div class="modal__content active" id="tab-cross">
+        <ul class="modal__schedule">
+          <li><strong>Seg a Qui:</strong> 06h · 07h · 08h · 16h30 · 17h30 · 18h30 · 19h30 · 20h30</li>
+          <li><strong>Sexta:</strong> 06h · 07h · 08h · 16h30 · 17h30 · 18h30 · 19h30</li>
+          <li><strong>Sábado:</strong> 07h02</li>
+          <li class="closed"><strong>Domingo:</strong> Fechado</li>
+        </ul>
+      </div>
+
+      <!-- Conteúdo Hyrox -->
+      <!-- <div class="modal__content" id="tab-hyrox">
+        <ul class="modal__schedule">
+          <li><strong>Seg e Qua:</strong> 06h · 07h · 18h30 · 19h30 · 20h30</li>
+          <li><strong>Sexta:</strong> 06h · 07h · 18h30 · 19h30</li>
+          <li><strong>Sábado:</strong> 07h</li>
+          <li class="closed"><strong>Domingo:</strong> Fechado</li>
+        </ul>
+      </div> -->
+
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
 </html>
