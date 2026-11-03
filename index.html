@@ -3,289 +3,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BBOX TRAINING</title>
+  <title>BBOX Training | Hyrox em Suzano - SP</title>
+  <meta name="description" content="BBOX Training: o box do Nº 1 do Brasil em Hyrox. Estrutura completa de prova, treinos com Bruno Henrique e horários flexíveis em Suzano - SP." />
 
-  <!-- Favicon -->
+  <!-- Open Graph (TROCAR pelo domínio final e pela foto de compartilhamento 1200x630) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BBOX Training | Hyrox em Suzano - SP" />
+  <meta property="og:description" content="O box do Nº 1 do Brasil em Hyrox. Treine na estrutura completa de prova." />
+  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/og.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
   <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon" />
-
-  <!-- Ícones Remix -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-  <!-- Google Fonts: Barlow Condensed (display) + Barlow (corpo) -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ==============================
-       NAVEGAÇÃO
-       Para editar os links, altere o texto e o href="#secao"
-       ============================== -->
+  <!-- NAVEGAÇÃO -->
   <nav class="navbar" id="navbar">
     <div class="navbar__inner">
-
-      <!-- Logo -->
       <a href="#home" class="navbar__logo">
         <img src="assets/logo.png" alt="BBOX Training" />
       </a>
 
-      <!-- Links (desktop) -->
       <ul class="navbar__links" id="navLinks">
         <li><a href="#home">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#programs">Programas</a></li>
-        <li><a href="#why">Diferenciais</a></li>
+        <li><a href="#coach">Bruno Henrique</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a href="#programs">Treinos</a></li>
         <li><a href="#contact">Contato</a></li>
-        <!-- Botão principal no nav -->
         <li>
-          <a href="https://wa.me/5511982306459" class="btn btn--nav" target="_blank" rel="noopener">
-            Comece agora
-          </a>
+          <a href="https://wa.me/5511982306459" class="btn btn--nav" target="_blank" rel="noopener">Comece agora</a>
         </li>
       </ul>
 
-      <!-- Botão hamburguer (mobile) -->
       <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
         <i class="ri-menu-line"></i>
       </button>
-
     </div>
   </nav>
 
-  <!-- Menu mobile (overlay) -->
+  <!-- MENU MOBILE -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-menu__close" id="mobileClose" aria-label="Fechar menu">
       <i class="ri-close-line"></i>
     </button>
     <ul>
       <li><a href="#home" class="mobile-link">Início</a></li>
-      <li><a href="#about" class="mobile-link">Sobre</a></li>
-      <li><a href="#programs" class="mobile-link">Programas</a></li>
-      <li><a href="#why" class="mobile-link">Diferenciais</a></li>
+      <li><a href="#coach" class="mobile-link">Bruno Henrique</a></li>
+      <li><a href="#estrutura" class="mobile-link">Estrutura</a></li>
+      <li><a href="#programs" class="mobile-link">Treinos</a></li>
       <li><a href="#contact" class="mobile-link">Contato</a></li>
       <li>
-        <a href="https://wa.me/5511982306459" class="btn btn--primary mobile-link" target="_blank" rel="noopener">
-          Comece agora
-        </a>
+        <a href="https://wa.me/5511982306459" class="btn btn--primary mobile-link" target="_blank" rel="noopener">Comece agora</a>
       </li>
     </ul>
   </div>
 
 
-  <!-- ==============================
-       HERO / SEÇÃO INICIAL
-       ============================== -->
+  <!-- HERO -->
   <section class="hero" id="home">
-    <!-- Fundo com grain/textura via CSS -->
     <div class="hero__bg"></div>
 
     <div class="container hero__container">
-      <!-- Texto principal -->
       <div class="hero__text" data-reveal>
-        <span class="hero__label">BBOX TRAINING</span>
+        <span class="hero__label">BBOX TRAINING · HYROX · SUZANO - SP</span>
         <h1 class="hero__title">
-          TENHA UM CORPO<br />
-          <span class="hero__title--accent">SAUDÁVEL</span><br />
-          COM OS TREINOS<br />CERTOS
+          O BOX DO<br />
+          <span class="hero__title--accent">Nº 1 DO BRASIL</span><br />
+          EM HYROX
         </h1>
+        <!-- TODO: especifique a fonte do "Nº 1" (ranking oficial, categoria e ano) -->
         <p class="hero__description">
-          Programas desenvolvidos por especialistas para melhorar sua força, resistência e bem-estar. Do iniciante ao avançado — aqui você evolui.
+          Treine na estrutura completa de prova, com o método de Bruno Henrique, o atleta que lidera o Hyrox no Brasil.
         </p>
 
-        <!-- Pills das modalidades -->
         <div class="hero__pills">
-          <span class="pill">Cross Training</span>
-          <span class="pill">Hyrox</span>
           <span class="pill">Corrida</span>
-          <span class="pill">LPO</span>
+          <span class="pill">Ergômetros</span>
+          <span class="pill">Estações</span>
+          <span class="pill">Competição</span>
         </div>
 
-        <!-- CTAs -->
         <div class="hero__actions">
           <a href="https://wa.me/5511982306459" class="btn btn--primary" target="_blank" rel="noopener">
-            <i class="ri-whatsapp-line"></i> Fale conosco
+            <i class="ri-whatsapp-line"></i> Agendar aula experimental
           </a>
-          <a href="#programs" class="btn btn--outline">
-            Ver programas <i class="ri-arrow-down-line"></i>
+          <a href="#estrutura" class="btn btn--outline">
+            Ver a estrutura <i class="ri-arrow-down-line"></i>
           </a>
         </div>
       </div>
 
-      <!-- Imagem hero -->
       <div class="hero__image" data-reveal-right>
-        <img src="assets/header.png" alt="Atleta BBOX Training" />
+        <!-- TROCAR: foto do Bruno em ação, vertical ou quadrada -->
+        <img src="assets/brunohenrique_01_semfundo.png" alt="Bruno Henrique competindo em Hyrox" />
       </div>
     </div>
 
-    <!-- Linha decorativa inferior -->
     <div class="hero__divider"></div>
   </section>
 
 
-  <!-- ==============================
-       SOBRE
-       ============================== -->
-  <section class="about" id="about">
-    <div class="container about__container">
+  <!-- NÚMEROS -->
+  <section class="stats">
+    <div class="container stats__grid">
+      <div class="stats__item"><strong>Nº 1</strong><span>Ranking Hyrox Brasil</span></div>
+      <!-- TROCAR "00" pelos números reais do Bruno -->
+      <div class="stats__item"><strong>58min 41s</strong><span>Melhor tempo</span></div>
+      <div class="stats__item"><strong>06</strong><span>Pódios conquistados</span></div>
+    </div>
+  </section>
 
+
+  <!-- BRUNO HENRIQUE -->
+  <section class="about" id="coach">
+    <div class="container about__container">
       <div class="about__image" data-reveal-left>
-        <img src="assets/about.jpg" alt="Academia BBOX Training" />
-        <!-- Badge sobre a imagem -->
-        <!-- <div class="about__badge">
-          <span class="about__badge-number">+</span>
-          <span class="about__badge-text">Resultados<br/>reais</span>
-        </div> -->
+        <!-- TROCAR: foto profissional do Bruno -->
+        <img src="assets/bruno.webp" alt="Bruno Henrique, atleta de Hyrox" loading="lazy" />
       </div>
 
       <div class="about__content" data-reveal>
-        <!-- Label de seção -->
-        <span class="section__label">Sobre nós</span>
-        <h2 class="section__title">
-          Conquiste seus objetivos com quem entende de resultado
-        </h2>
+        <span class="section__label">O atleta</span>
+        <h2 class="section__title">Bruno Henrique</h2>
+        <!-- TODO: escreva a trajetória, títulos, categoria e ano dos resultados -->
         <p class="section__body">
-          No BBOX TRAINING, oferecemos mais do que treinos: oferecemos transformação. Com acompanhamento profissional, treinos personalizados e um ambiente inspirador, você terá tudo que precisa para se superar todos os dias.
+          Referência do Hyrox no Brasil, Bruno leva para o BBOX a mesma preparação que usa nas provas: treino de corrida, força e estações com o ritmo e a técnica que a competição pede.
         </p>
         <p class="section__body">
-          Venha fortalecer seu corpo, sua mente e sua rotina. Nossa equipe está pronta para te guiar em cada etapa da sua evolução.
+          Aqui você treina com quem vive a prova, seja para fazer a primeira ou para brigar por pódio.
         </p>
-        <a href="https://wa.me/5511982306459" class="btn btn--primary" target="_blank" rel="noopener">
-          Quero começar
-        </a>
+        <a href="https://wa.me/5511982306459" class="btn btn--primary" target="_blank" rel="noopener">Treinar com o BBOX</a>
       </div>
-
     </div>
   </section>
 
 
-  <!-- ==============================
-       PROGRAMAS
-       ============================== -->
-  <section class="programs" id="programs">
+  <!-- ESTRUTURA -->
+  <section class="gallery" id="estrutura">
     <div class="container">
-
       <div class="section__head" data-reveal>
-        <span class="section__label">Modalidades</span>
-        <h2 class="section__title">Os programas ideais<br />para seu estilo de vida</h2>
+        <span class="section__label">Estrutura</span>
+        <h2 class="section__title">Equipamentos no padrão de prova</h2>
         <p class="section__body section__body--center">
-          Seja para ganhar força, perder peso ou melhorar o condicionamento — temos o treino certo pra você.
+          Treine em cada estação com o mesmo equipamento que você vai encontrar no dia da competição.
         </p>
       </div>
 
-      <!-- Grid de cards -->
+      <!-- TROCAR as fotos e os alt. A 1ª é panorâmica (16:9); as outras duas são 4:3 -->
+      <div class="gallery__grid">
+        <figure class="gallery__wide" data-reveal><img src="assets/bboxtraining_01.png" alt="Visão geral do box de Hyrox do BBOX Training" loading="lazy" /><figcaption>Visão geral do box</figcaption></figure>
+        <!-- <figure data-reveal><img src="assets/estrutura-2.webp" alt="Estações de Hyrox alinhadas no BBOX Training" loading="lazy" /><figcaption>Estações de prova</figcaption></figure>
+        <figure data-reveal><img src="assets/estrutura-3.webp" alt="Ergômetros e área de corrida do BBOX Training" loading="lazy" /><figcaption>Ergômetros e corrida</figcaption></figure> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FORMATOS DE TREINO -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <span class="section__label">Treinos</span>
+        <h2 class="section__title">Do primeiro Hyrox ao pódio</h2>
+        <p class="section__body section__body--center">
+          Escolha o formato que combina com o seu objetivo e o seu momento.
+        </p>
+      </div>
+
       <div class="programs__grid">
-
-        <!-- Card: Crossfit -->
         <div class="program-card" data-reveal>
-          <div class="program-card__icon">
-            <img src="assets/crossfit_icon.png" alt="Crossfit" />
-          </div>
-          <h3 class="program-card__title">Crossfit</h3>
+          <div class="program-card__icon"><i class="ri-group-line"></i></div>
+          <h3 class="program-card__title">Aula em grupo</h3>
           <p class="program-card__body">
-            Treinamento de alta intensidade que combina aeróbico, levantamento de peso, ginástica e movimentos funcionais. Construa músculo, aumente resistência e ganhe força com orientação especializada.
+            Treino guiado por coach com corrida, ergômetros e estações. Ideal para quem quer começar no Hyrox ou manter a rotina com energia de turma.
           </p>
-          <span class="program-card__tag">Alta intensidade</span>
+          <span class="program-card__tag">Iniciante ao avançado</span>
         </div>
 
-        <!-- Card: Hyrox -->
         <div class="program-card" data-reveal>
-          <div class="program-card__icon">
-            <img src="assets/remo_white_icon.png" alt="Hyrox" />
-          </div>
-          <h3 class="program-card__title">Hyrox</h3>
+          <div class="program-card__icon"><i class="ri-timer-flash-line"></i></div>
+          <h3 class="program-card__title">Simulado de prova</h3>
           <p class="program-card__body">
-            Combinação de corrida e exercícios funcionais de alta intensidade. Para quem busca superar seus limites físicos e mentais com um desafio completo.
+            Percorra as 8 estações e os 8 km de corrida no formato da competição. Você testa ritmo, estratégia e transições antes do dia da prova.
           </p>
-          <span class="program-card__tag">Resistência</span>
+          <span class="program-card__tag">Preparação</span>
         </div>
 
-        <!-- Card: LPO -->
         <div class="program-card" data-reveal>
-          <div class="program-card__icon">
-            <img src="assets/lpo_icon.png" alt="LPO" />
-          </div>
-          <h3 class="program-card__title">LPO</h3>
+          <div class="program-card__icon"><i class="ri-trophy-line"></i></div>
+          <h3 class="program-card__title">Equipe de competição</h3>
           <p class="program-card__body">
-            Levantamento de Peso Olímpico para desenvolver força, potência e mobilidade. Ideal para quem busca técnica e desempenho com ganhos reais de força.
-          </p>
-          <span class="program-card__tag">Força & Técnica</span>
-        </div>
-
-        <!-- Card: Corrida -->
-        <div class="program-card" data-reveal>
-          <div class="program-card__icon">
-            <img src="assets/program-4.png" alt="Corrida" />
-          </div>
-          <h3 class="program-card__title">Corrida</h3>
-          <p class="program-card__body">
-            Treinos personalizados para iniciantes ou corredores experientes. Evolua na resistência, ganhe velocidade e melhore seu desempenho em provas de rua.
+            Planilha e acompanhamento para quem compete. Metas por prova, ajustes de carga e treino específico para baixar o seu tempo.
           </p>
           <span class="program-card__tag">Performance</span>
         </div>
-
       </div>
     </div>
   </section>
 
 
-  <!-- ==============================
-       POR QUE ESCOLHER O BBOX
-       ============================== -->
+  <!-- DIFERENCIAIS -->
   <section class="why" id="why">
     <div class="container why__container">
-
       <div class="why__content" data-reveal>
         <span class="section__label">Diferenciais</span>
-        <h2 class="section__title">Por que escolher o BBOX TRAINING?</h2>
+        <h2 class="section__title">Por que treinar no BBOX?</h2>
 
         <ul class="why__list">
           <li class="why__item">
-            <div class="why__item-icon">
-              <i class="ri-file-list-3-line"></i>
-            </div>
+            <div class="why__item-icon"><i class="ri-medal-line"></i></div>
             <div>
-              <h4>Planilhas Personalizadas</h4>
-              <p>Treinos ajustados ao seu objetivo, com acompanhamento de profissionais que entendem sua rotina e evolução.</p>
+              <h4>Método de campeão</h4>
+              <p>Treinos construídos a partir da rotina de quem lidera o Hyrox no Brasil.</p>
             </div>
           </li>
           <li class="why__item">
-            <div class="why__item-icon">
-              <i class="ri-user-star-line"></i>
-            </div>
+            <div class="why__item-icon"><i class="ri-user-star-line"></i></div>
             <div>
-              <h4>Coaches Preparados</h4>
-              <p>Equipe experiente e especializada para garantir treinos seguros, eficientes e motivadores.</p>
+              <h4>Coaches preparados</h4>
+              <p>Equipe especializada para garantir treinos seguros, eficientes e motivadores.</p>
             </div>
           </li>
           <li class="why__item">
-            <div class="why__item-icon">
-              <i class="ri-time-line"></i>
-            </div>
+            <div class="why__item-icon"><i class="ri-time-line"></i></div>
             <div>
-              <h4>Horário Flexível</h4>
-              <p>Treine no seu ritmo. Nossa agenda é pensada para se adaptar à sua rotina sem abrir mão dos resultados.</p>
+              <h4>Horário flexível</h4>
+              <p>Turmas de manhã, tarde e noite para encaixar o treino na sua rotina.</p>
             </div>
           </li>
         </ul>
 
-        <!-- Botão de horários -->
         <button class="btn btn--outline" id="btnHorarios">
           <i class="ri-calendar-line"></i> Ver horários de treino
         </button>
       </div>
 
       <div class="why__image" data-reveal-right>
-        <img src="assets/service.png" alt="Treino BBOX Training" />
+        <!-- TROCAR: foto de treino em grupo -->
+        <img src="assets/service.webp" alt="Treino em grupo no BBOX Training" loading="lazy" />
       </div>
-
     </div>
   </section>
 
 
-  <!-- ==============================
-       NUTRICIONISTA PARCEIRA
-       ============================== -->
+  <!-- NUTRICIONISTA (remova esta seção se a parceria acabou) -->
   <section class="nutri">
     <div class="container nutri__container" data-reveal>
       <div class="nutri__text">
@@ -294,50 +258,30 @@
         <p>Alcance seus objetivos com o suporte da nutricionista parceira <strong>Nathalye Matos</strong>. Treino e alimentação juntos fazem toda a diferença.</p>
       </div>
       <a href="https://nathalyenutri.netlify.app/" class="btn btn--gold" target="_blank" rel="noopener">
-        Conheça a Nutricionista <i class="ri-external-link-line"></i>
+        Conheça a nutricionista <i class="ri-external-link-line"></i>
       </a>
     </div>
   </section>
 
 
-  <!-- ==============================
-       FOOTER / CONTATO
-       ============================== -->
+  <!-- FOOTER -->
   <footer class="footer" id="contact">
     <div class="container footer__grid">
-
-      <!-- Coluna 1: marca -->
       <div class="footer__brand">
-        <a href="#home">
-          <img src="assets/logo.png" alt="BBOX Training" class="footer__logo" />
-        </a>
-        <p>Sua transformação começa aqui. Treinos de alta qualidade com orientação especializada em Suzano - SP.</p>
+        <a href="#home"><img src="assets/logo.png" alt="BBOX Training" class="footer__logo" /></a>
+        <p>O box do Nº 1 do Brasil em Hyrox, em Suzano - SP.</p>
       </div>
 
-      <!-- Coluna 2: links -->
       <div class="footer__col">
         <h4>Navegação</h4>
         <ul>
-          <li><a href="#about">Sobre Nós</a></li>
-          <li><a href="#why">Por que nos escolher</a></li>
-          <li>
-            <button class="footer__link-btn" id="btnHorariosFooter">Horários de Treino</button>
-          </li>
+          <li><a href="#coach">Bruno Henrique</a></li>
+          <li><a href="#estrutura">Estrutura</a></li>
+          <li><a href="#programs">Treinos</a></li>
+          <li><button class="footer__link-btn" id="btnHorariosFooter">Horários de treino</button></li>
         </ul>
       </div>
 
-      <!-- Coluna 3: modalidades -->
-      <div class="footer__col">
-        <h4>Modalidades</h4>
-        <ul>
-          <li><a href="#programs">Cross Training</a></li>
-          <li><a href="#programs">Hyrox</a></li>
-          <li><a href="#programs">Corrida</a></li>
-          <li><a href="#programs">LPO</a></li>
-        </ul>
-      </div>
-
-      <!-- Coluna 4: contato -->
       <div class="footer__col">
         <h4>Contato</h4>
         <ul class="footer__contact">
@@ -358,33 +302,21 @@
           </li>
         </ul>
       </div>
-
     </div>
 
-    <!-- Rodapé inferior -->
     <div class="footer__bottom">
       <p>© 2025 cKe Design. Todos os direitos reservados.</p>
     </div>
   </footer>
 
 
-  <!-- ==============================
-       BOTÃO FLUTUANTE WHATSAPP
-       ============================== -->
-  <a
-    href="https://wa.me/5511982306459"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Falar no WhatsApp"
-  >
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5511982306459" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <i class="ri-whatsapp-line"></i>
   </a>
 
 
-  <!-- ==============================
-       MODAL DE HORÁRIOS
-       ============================== -->
+  <!-- MODAL DE HORÁRIOS -->
   <div class="modal" id="modalHorarios" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal__overlay" id="modalOverlay"></div>
     <div class="modal__box">
@@ -392,37 +324,23 @@
         <i class="ri-close-line"></i>
       </button>
 
-      <h2 id="modalTitle">Horários de Treino</h2>
+      <h2 id="modalTitle">Horários de treino</h2>
 
-      <!-- Tabs -->
       <div class="modal__tabs">
-        <span class="modal__tab active" data-tab="cross">Cross Training | HYROX</span>
-        <!-- <button class="modal__tab" data-tab="hyrox">Hyrox</button> -->
+        <span class="modal__tab active" data-tab="hyrox">Hyrox</span>
       </div>
 
-      <!-- Conteúdo Cross -->
-      <div class="modal__content active" id="tab-cross">
+      <div class="modal__content active" id="tab-hyrox">
+        <!-- TROCAR pelos horários novos -->
         <ul class="modal__schedule">
           <li><strong>Seg a Qui:</strong> 06h · 07h · 08h · 16h30 · 17h30 · 18h30 · 19h30 · 20h30</li>
           <li><strong>Sexta:</strong> 06h · 07h · 08h · 16h30 · 17h30 · 18h30 · 19h30</li>
-          <li><strong>Sábado:</strong> 07h02</li>
-          <li class="closed"><strong>Domingo:</strong> Fechado</li>
-        </ul>
-      </div>
-
-      <!-- Conteúdo Hyrox -->
-      <!-- <div class="modal__content" id="tab-hyrox">
-        <ul class="modal__schedule">
-          <li><strong>Seg e Qua:</strong> 06h · 07h · 18h30 · 19h30 · 20h30</li>
-          <li><strong>Sexta:</strong> 06h · 07h · 18h30 · 19h30</li>
           <li><strong>Sábado:</strong> 07h</li>
           <li class="closed"><strong>Domingo:</strong> Fechado</li>
         </ul>
-      </div> -->
-
+      </div>
     </div>
   </div>
-
 
   <script src="main.js"></script>
 </body>
