@@ -13,27 +13,58 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", handleScroll);
 
   // ==================== MOBILE MENU ====================
-  const navToggle = document.getElementById("navToggle");
-  const mobileMenu = document.getElementById("mobileMenu");
-  const mobileClose = document.getElementById("mobileClose");
+  // const navToggle = document.getElementById("navToggle");
+  // const mobileMenu = document.getElementById("mobileMenu");
+  // const mobileClose = document.getElementById("mobileClose");
 
-  navToggle.addEventListener("click", () => {
-    mobileMenu.classList.add("open");
-    document.body.style.overflow = "hidden";
-  });
+  // navToggle.addEventListener("click", () => {
+  //   mobileMenu.classList.add("open");
+  //   document.body.style.overflow = "hidden";
+  // });
 
-  mobileClose.addEventListener("click", () => {
-    mobileMenu.classList.remove("open");
-    document.body.style.overflow = "visible";
-  });
+  // mobileClose.addEventListener("click", () => {
+  //   mobileMenu.classList.remove("open");
+  //   document.body.style.overflow = "visible";
+  // });
 
-  // Fechar menu ao clicar em link
-  document.querySelectorAll(".mobile-link").forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.remove("open");
-      document.body.style.overflow = "visible";
-    });
-  });
+  // // Fechar menu ao clicar em link
+  // document.querySelectorAll(".mobile-link").forEach(link => {
+  //   link.addEventListener("click", () => {
+  //     mobileMenu.classList.remove("open");
+  //     document.body.style.overflow = "visible";
+  //   });
+  // });
+
+const navToggle = document.getElementById("navToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const mobileClose = document.getElementById("mobileClose");
+const mobileOverlay = document.getElementById("mobileOverlay");
+
+function openMenu() {
+  mobileMenu.classList.add("open");
+  mobileOverlay.classList.add("open");
+  mobileMenu.setAttribute("aria-hidden", "false");
+  navToggle.setAttribute("aria-expanded", "true");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove("open");
+  mobileOverlay.classList.remove("open");
+  mobileMenu.setAttribute("aria-hidden", "true");
+  navToggle.setAttribute("aria-expanded", "false");
+  document.body.style.overflow = "";
+}
+
+navToggle.addEventListener("click", openMenu);
+mobileClose.addEventListener("click", closeMenu);
+mobileOverlay.addEventListener("click", closeMenu);
+document.querySelectorAll(".mobile-link").forEach(l => l.addEventListener("click", closeMenu));
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && mobileMenu.classList.contains("open")) closeMenu();
+});
+
 
   // ==================== MODAL HORÁRIOS ====================
   const modal = document.getElementById("modalHorarios");
@@ -84,3 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealElements.forEach(el => observer.observe(el));
 });
+
+// ================ YEAR FOOTER ===================
+document.getElementById("year").textContent = new Date().getFullYear();

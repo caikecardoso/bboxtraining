@@ -6,14 +6,14 @@
   <title>BBOX Training | Hyrox em Suzano - SP</title>
   <meta name="description" content="BBOX Training: o box do Nº 1 do Brasil em Hyrox. Estrutura completa de prova, treinos com Bruno Carvalho e horários flexíveis em Suzano - SP." />
 
-  <!-- Open Graph (TROCAR pelo domínio final e pela foto de compartilhamento 1200x630) -->
+  <!-- Open Graph (pelo domínio final e pela foto de compartilhamento 1200x630) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BBOX Training | Hyrox em Suzano - SP" />
   <meta property="og:description" content="O box do Nº 1 do Brasil em Hyrox. Treine na estrutura completa de prova." />
-  <meta property="og:image" content="https://SEU-DOMINIO.com.br/assets/og.jpg" />
+  <meta property="og:image" content="https://bboxtraining.netlify.app/assets/logo.png" />
   <meta property="og:locale" content="pt_BR" />
 
-  <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon" />
+  <link rel="icon" href="assets/logo.ico" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -38,14 +38,16 @@
         </li>
       </ul>
 
-      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <i class="ri-menu-line"></i>
       </button>
     </div>
   </nav>
 
   <!-- MENU MOBILE -->
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <button class="mobile-menu__close" id="mobileClose" aria-label="Fechar menu">
       <i class="ri-close-line"></i>
     </button>
@@ -97,8 +99,8 @@
       </div>
 
       <div class="hero__image" data-reveal-right>
-        <!-- TROCAR: foto do Bruno em ação, vertical ou quadrada -->
-        <img src="assets/hero.png" alt="Bruno Carvalho zero1 no Hyrox" />
+        <!-- foto do Bruno em ação, vertical ou quadrada -->
+        <img src="assets/hero.png" alt="Bruno Carvalho número 1 no Hyrox" />
       </div>
     </div>
 
@@ -110,7 +112,6 @@
   <section class="stats">
     <div class="container stats__grid">
       <div class="stats__item"><strong>Nº 1</strong><span>Ranking Hyrox Brasil</span></div>
-      <!-- TROCAR "00" pelos números reais do Bruno -->
       <div class="stats__item"><strong>58min 41s</strong><span>Melhor tempo</span></div>
       <div class="stats__item"><strong>06</strong><span>Pódios conquistados</span></div>
     </div>
@@ -121,7 +122,7 @@
   <section class="about" id="coach">
     <div class="container about__container">
       <div class="about__image" data-reveal-left>
-        <!-- TROCAR: foto profissional do Bruno -->
+        <!--foto profissional do Bruno -->
         <img src="assets/atleta01.png" alt="Bruno Carvalho, atleta de Hyrox" loading="lazy" />
       </div>
 
@@ -152,7 +153,6 @@
         </p>
       </div>
 
-      <!-- TROCAR as fotos e os alt. A 1ª é panorâmica (16:9); as outras duas são 4:3 -->
       <div class="gallery__grid">
         <figure class="gallery__wide" data-reveal><img src="assets/bboxtraining_01.png" alt="Visão geral do box de Hyrox do BBOX Training" loading="lazy" /><figcaption>Visão geral do box</figcaption></figure>
         <figure data-reveal><img src="assets/equipamentos.png" alt="Equipamentos" loading="lazy" /><figcaption>Equipamentos</figcaption></figure>
@@ -244,14 +244,13 @@
       </div>
 
       <div class="why__image" data-reveal-right>
-        <!-- TROCAR: foto de treino em grupo -->
         <img src="assets/familia_bbox.png" alt="Treino em grupo no BBOX Training" loading="lazy" />
       </div>
     </div>
   </section>
 
 
-  <!-- NUTRICIONISTA (remova esta seção se a parceria acabou) -->
+  <!-- NUTRICIONISTA -->
   <section class="nutri">
     <div class="container nutri__container" data-reveal>
       <div class="nutri__text">
@@ -307,7 +306,7 @@
     </div>
 
     <div class="footer__bottom">
-      <p>© 2025 cKe Design. Todos os direitos reservados.</p>
+      <p>© <span id="year">2026</span> cKe Design. Todos os direitos reservados.</p>
     </div>
   </footer>
 
@@ -333,7 +332,6 @@
       </div>
 
       <div class="modal__content active" id="tab-hyrox">
-        <!-- TROCAR pelos horários novos -->
         <ul class="modal__schedule">
           <li><strong>Seg a Qui:</strong> 06h · 07h · 08h · 16h30 · 17h30 · 18h30 · 19h30 · 20h30</li>
           <li><strong>Sexta:</strong> 06h · 07h · 08h · 16h30 · 17h30 · 18h30 · 19h30</li>

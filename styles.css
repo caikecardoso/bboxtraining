@@ -198,7 +198,7 @@ h1, h2, h3, h4 {
    MENU MOBILE
    ================================================ */
 .mobile-menu {
-  position: fixed;
+  /* position: fixed;
   inset: 0;
   z-index: 200;
   background-color: var(--bg-darkest);
@@ -208,9 +208,35 @@ h1, h2, h3, h4 {
   justify-content: center;
   transform: translateX(100%);
   visibility: hidden;
-  transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1), visibility 0.4s;
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1), visibility 0.4s; */
+
+  position: fixed;
+  top: calc(var(--nav-h) + 8px);
+  right: 1rem;
+  width: min(calc(100vw - 2rem), 300px);
+  max-height: calc(100svh - var(--nav-h) - 1.5rem);
+  overflow-y: auto;
+  z-index: 200;
+  padding: 4rem 1.5rem 2rem;
+  background-color: var(--bg-darkest);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-12px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
 }
-.mobile-menu.open { transform: translateX(0); visibility: visible; }
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: all;
+}
 
 .mobile-menu__close {
   position: absolute;
@@ -227,20 +253,30 @@ h1, h2, h3, h4 {
 }
 .mobile-menu__close:hover { color: var(--yellow); border-color: var(--yellow); }
 
-.mobile-menu ul { display: flex; flex-direction: column; align-items: center; gap: 1.75rem; }
+.mobile-menu ul { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
 
 .mobile-menu a {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-white);
 }
 .mobile-menu a:hover { color: var(--yellow); }
-.mobile-menu a.btn--primary { color: #000; font-size: 1.4rem; }
+.mobile-menu a.btn--primary { color: #000; font-size: 1.2rem; }
 .mobile-menu a.btn--primary:hover { color: var(--yellow); }
 
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 199;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-overlay.open { opacity: 1; pointer-events: all; }
 
 /* ================================================
    HERO
