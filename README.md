@@ -1,98 +1,78 @@
-\# 🥊 BBox Training
+# BBOX Training
 
+Site institucional da **BBOX Training**, academia de Hyrox em Suzano - SP, liderada por Bruno Carvalho, recordista brasileiro e número 1 do país na categoria.
 
+O projeto foi desenvolvido do zero, sem frameworks, com foco em performance, responsividade e identidade visual alinhada ao universo do Hyrox.
 
-Projeto de site institucional desenvolvido para uma academia de treinamento funcional e crossfit fictícia chamada \*\*BBox Training\*\*.
+## Acesse o site
 
+https://caikecardoso.github.io/bboxtraining
 
+## Tecnologias
 
-\## 🚀 Tecnologias Utilizadas
+- HTML5 semântico
+- CSS3 (variáveis, Grid, Flexbox, abordagem mobile-first)
+- JavaScript puro (vanilla)
+- Fontes Barlow e Barlow Condensed
 
+## Seções do site
 
+- Hero com chamada principal e botões de ação
+- Números de destaque (ranking, melhor tempo e pódios)
+- Apresentação do atleta Bruno Carvalho
+- Galeria da estrutura e dos equipamentos no padrão de prova
+- Formatos de treino: aula em grupo, simulado de prova e equipe de competição
+- Diferenciais da academia
+- Parceria com a nutricionista Nathalye Matos
+- Rodapé com navegação, contato, Instagram e localização
 
-\- \*\*HTML5\*\*
+## Funcionalidades
 
-\- \*\*CSS3\*\*
+- Navbar fixa com efeito de fundo ao rolar a página
+- Menu mobile em tela cheia
+- Modal de horários de treino com abas
+- Animações de entrada ao rolar, via Intersection Observer
+- Botão flutuante de WhatsApp
+- Suporte a `prefers-reduced-motion` para usuários que preferem menos animação
+- Layout responsivo para celular, tablet e desktop
 
-\- \*\*JavaScript\*\*
+## Estrutura do projeto
 
-
-
-\## 📷 Funcionalidades
-
-
-
-\- Página inicial com apresentação da academia
-
-\- Seção de modalidades oferecidas
-
-\- Imagens e ícones personalizados
-
-\- Layout responsivo para dispositivos móveis
-
-\- Animações básicas com JavaScript
-
-
-
-\## 📁 Estrutura do Projeto
-
-
-
-bbox/
-
+```text
+bboxtraining/
 ├── index.html
-
 ├── styles.css
-
 ├── main.js
-
 └── assets/
+    ├── logo.png
+    ├── hero.png
+    ├── atleta01.png
+    ├── bboxtraining_01.png
+    ├── equipamentos.png
+    ├── esteiras.png
+    ├── banheira.png
+    ├── sleds.png
+    └── familia_bbox.png
+```
 
-├── imagens (.png, .jpg)
+## Personalização
 
-└── ícones (.ico)
+As cores, fontes e medidas principais ficam nas variáveis do `:root` no início do `styles.css`. Para mudar a identidade visual, basta editar esses valores. As media queries ficam concentradas no final do arquivo.
 
+## Como rodar localmente
 
+1. Clone o repositório:
 
+   ```bash
+   git clone https://github.com/caikecardoso/bboxtraining.git
+   ```
 
+2. Abra o arquivo `index.html` no navegador, ou use uma extensão como o Live Server no VS Code.
 
-\## 📱 Responsividade
+Não há dependências nem etapa de build.
 
+## Autor
 
+Desenvolvido por [Caike Cardoso](https://github.com/caikecardoso) · cKe Design
 
-O layout foi desenvolvido com foco em \*\*responsividade\*\*, garantindo uma boa experiência tanto em dispositivos móveis quanto em desktops.
-
-
-
-\## 🎯 Objetivo
-
-
-
-Este projeto faz parte do meu portfólio como desenvolvedor front-end, com o objetivo de demonstrar conhecimentos em estruturação, estilização e interatividade de páginas web.
-
-
-
-\## 🔗 Deploy
-
-
-
-\[🔗 Acesse a versão online do projeto (se disponível)](https://caikecardoso.github.io/bboxtraining)
-
-
-
-> 💡 \*Caso ainda não tenha publicado no GitHub Pages, posso te ajudar a fazer isso com 1 comando.\*
-
-
-
-\## 👨‍💻 Autor
-
-
-
-Desenvolvido por \[Caike Cardoso](https://github.com/caikecardoso)  
-
-\[!\[LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/caike-cardoso-65321493/)
-
-
-
-
-
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caike-cardoso-65321493/)
