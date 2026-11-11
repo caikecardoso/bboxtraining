@@ -206,6 +206,81 @@
     </div>
   </section>
 
+  <!-- -- CLINICAS DE HYROX -- -->
+  <section class="clinic" id="clinicas">
+    <div class="container clinic__container">
+      <div class="clinic__content" data-reveal-left>
+        <span class="section__label">Clínicas de Hyrox</span>
+        <h2 class="section__title">Leve o método de Bruno Carvalho para o seu Box</h2>
+        <p class="section__body">
+          Bruno ministra clínicas de Hyrox em Boxes e academias de todo o Brasil: ensina a metodologia de treino
+          e faz ajustes individuais na técnica e no ritmo dos alunos durante a prática.
+        </p>
+        <ul class="clinic__list">
+          <li><i class="fa-solid fa-check"></i> Metodologia de treino aplicada na prática</li>
+          <li><i class="fa-solid fa-check"></i> Correções e ajustes com cada aluno</li>
+          <li><i class="fa-solid fa-check"></i> Formato adaptado ao seu box e à sua turma</li>
+        </ul>
+      </div>
+
+      <form class="clinic__form" id="clinicForm" data-reveal-right novalidate>
+        <h3 class="clinic__form-title">Solicite uma clínica</h3>
+
+        <div class="form__row">
+          <div class="form__field">
+            <label for="cNome">Seu nome *</label>
+            <input type="text" id="cNome" name="nome" required autocomplete="name" />
+          </div>
+          <div class="form__field">
+            <label for="cBox">Nome do box *</label>
+            <input type="text" id="cBox" name="box" required />
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__field">
+            <label for="cCidade">Cidade / UF *</label>
+            <input type="text" id="cCidade" name="cidade" placeholder="Ex.: Curitiba - PR" required />
+          </div>
+          <div class="form__field">
+            <label for="cWhats">WhatsApp *</label>
+            <input type="tel" id="cWhats" name="whatsapp" placeholder="(11) 90000-0000" required autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="form__field">
+            <label for="cAlunos">Nº de participantes previsto</label>
+            <input type="number" id="cAlunos" name="alunos" min="1" inputmode="numeric" />
+          </div>
+          <div class="form__field">
+            <label for="cData">Data desejada</label>
+            <input type="text" id="cData" name="data" placeholder="Ex.: 2º semestre, 15/03" />
+          </div>
+        </div>
+
+        <div class="form__field">
+          <label for="cFormato">Formato</label>
+          <select id="cFormato" name="formato">
+            <option value="Ainda não sei, quero orientação">Ainda não sei, quero orientação</option>
+            <option value="Clínica de 1 dia">Clínica de 1 dia</option>
+            <option value="Fim de semana (2 dias)">Fim de semana (2 dias)</option>
+            <option value="Evento / parceria especial">Evento / parceria especial</option>
+          </select>
+        </div>
+
+        <div class="form__field">
+          <label for="cMsg">Conte sobre o seu box e o objetivo</label>
+          <textarea id="cMsg" name="mensagem" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary clinic__submit">
+          <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
+        </button>
+        <p class="clinic__feedback" id="clinicFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
   <!-- DIFERENCIAIS -->
   <section class="why" id="why">
@@ -306,7 +381,7 @@
     </div>
 
     <div class="footer__bottom">
-      <p>© <span id="year">2026</span> cKe Design. Todos os direitos reservados.</p>
+      <p>© <span id="year">2026</span> BBOX Training. Todos os direitos reservados.</p>
     </div>
   </footer>
 
